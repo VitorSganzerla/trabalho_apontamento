@@ -17,7 +17,7 @@
     <h1>
         Operadores
     </h1>
-    <a href="adicionar.php">Adicionar novo operador</a>
+    <a href="adicionar.php">Registrar novo operador</a>
     <table>
         <thead>
             <tr>

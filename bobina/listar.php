@@ -14,7 +14,7 @@
 </head>
 <body>
     <h1>Tarefas</h1>
-    <a href="adicionar.php">Adicionar nova tarefa</a>
+    <a href="adicionar.php">Registrar nova operação</a>
     <table border="1">
         <thead>
             <tr>
