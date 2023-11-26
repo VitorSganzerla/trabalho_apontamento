@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Adicionar</title>
 </head>
 <body>
-    <form action="adicionar.php" method="post">
-        <p>Nome: <input type="text" name="nome" required></p>
-        <p>Número de Matrícula: <input type="text" name="numero_matricula" required></p>
-        <input type="submit" value="Enviar" id="botao">
-    </form>
+    <main class="center">
+        <form action="adicionar.php" method="post">
+            <p>Nome: <input type="text" name="nome" required class="caixa_texto" required></p>
+            <p>Número de Matrícula: <input type="text" name="numero_matricula" required class="caixa_texto"></p>
+            <input type="submit" value="Enviar" id="botao">
+        </form>
+    </main>
 </body>
 </html>
 

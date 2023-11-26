@@ -30,9 +30,22 @@
     $conexao -> close();
 ?>
 
-<form action="editar.php" method="post">
-    <input type="hidden" name="id" value="<?php echo $Cliente['id']; ?>">
-    Nome: <input type="text" name="nome" value="<?php echo $Cliente['nome']; ?>"><br>
-    Cidade: <input type="text" name="cidade" value="<?php echo $Cliente['cidade']; ?>">
-    <input type="submit" value="Salvar">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="center"> 
+        <form action="editar.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $Cliente['id']; ?>">
+            <p>Nome: <input type="text" name="nome" class="caixa_texto" value="<?php echo $Cliente['nome']; ?>"></p>
+            <p>Cidade: <input type="text" name="cidade" class="caixa_texto" value="<?php echo $Cliente['cidade']; ?>"></p>
+            <input type="submit" value="Salvar" id="botao">
+        </form>
+    </main>
+</body>
+</html>

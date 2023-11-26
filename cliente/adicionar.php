@@ -7,11 +7,13 @@
     <title>Adicionar</title>
 </head>
 <body>
-    <form action="adicionar.php" method="post">
-        <p>Nome: <input type="text" name="nome" required></p>
-        <p>Cidade: <input type="text" name="cidade"></p>
-        <input type="submit" value="Enviar">
-    </form>
+    <main class="center">
+        <form action="adicionar.php" method="post">
+            <p>Nome: <input type="text" name="nome" class="caixa_texto" required></p>
+            <p>Cidade: <input type="text" name="cidade" class="caixa_texto" required></p>
+            <input type="submit" value="Enviar" id="botao">
+        </form>
+    </main>
 </body>
 </html>
 

@@ -7,26 +7,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Adicionar</title>
 </head>
 <body>
-    <form action="adicionar.php" method="post">
-        <select name="cliente_id" id="cliente_id">
-            <option value="">Selecione um Cliente</option>
-            <?php
-                $sql_cliente = "SELECT id, nome FROM Cliente";
-                $result_cliente = $conexao->query($sql_cliente);
-
-                while ($row = $result_cliente ->fetch_assoc()) {
-                    $cliente_id = $row['id'];
-                    $cliente_nome = $row['nome'];
-                    echo "<option value='$cliente_id'>$cliente_nome</option>";
-                }
-            ?>
-        </select>
-        <p>Nome: <input type="text" name="nome_item"></p>
-        <input type="submit" value="Enviar">
-    </form>
+    <main class="center">
+        <form action="adicionar.php" method="post">
+            <select name="cliente_id" id="cliente_id" class="seletor">
+                <option value="">Selecione um Cliente</option>
+                <?php
+                    $sql_cliente = "SELECT id, nome FROM Cliente";
+                    $result_cliente = $conexao->query($sql_cliente);
+                    while ($row = $result_cliente ->fetch_assoc()) {
+                        $cliente_id = $row['id'];
+                        $cliente_nome = $row['nome'];
+                        echo "<option value='$cliente_id'>$cliente_nome</option>";
+                    }
+                ?>
+            </select>
+            <p>Nome: <input type="text" name="nome_item" class="caixa_texto" required></p>
+            <input type="submit" value="Enviar" id="botao">
+        </form>
+    </main>
 </body>
 </html>
 

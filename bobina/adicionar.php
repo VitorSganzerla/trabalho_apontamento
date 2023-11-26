@@ -7,53 +7,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Adicionar</title>
 </head>
 <body>
-    <form action="adicionar.php" method="post">
-        Metragem: <input type="number" name="metragem">
-        Peso: <input type="number" name="peso">
-        <select name="operador_id" id="operador_id">
-            <option value="">Selecione um Operador</option>
-            <?php
-                $sql_operador = "SELECT id, nome FROM Operador";
-                $result_operador = $conexao->query($sql_operador);
-
-                while ($row = $result_operador->fetch_assoc()) {
-                    $operador_id= $row['id'];
-                    $operador_nome = $row['nome'];
-                    echo "<option value='$operador_id'>$operador_nome</option>";
-                }
-            ?>
-        </select>
-        <select name="item_id" id="item_id">
-            <option value="">Selecione um Item</option>
-            <?php
-                $sql_item = "SELECT id, nome FROM Item";
-                $result_item = $conexao->query($sql_item);
-
-                while ($row = $result_item->fetch_assoc()) {
-                    $item_id = $row['id'];
-                    $item_nome = $row['nome'];
-                    echo "<option value='$item_id'>$item_nome</option>";
-                }
-            ?>
-        </select>
-        <select name="cliente_id" id="cliente_id">
-            <option value="">Selecione um Cliente</option>
-            <?php
-                $sql_cliente = "SELECT id, nome FROM Cliente";
-                $result_cliente = $conexao->query($sql_cliente);
-
-                while ($row = $result_cliente->fetch_assoc()) {
-                    $cliente_id = $row['id'];
-                    $cliente_nome = $row['nome'];
-                    echo "<option value='$cliente_id'>$cliente_nome</option>";
-                }
-            ?>
-        </select>
-        <input type="submit" value="Enviar">
-    </form>
+    <main class="center">
+        <form action="adicionar.php" method="post">
+            <p>Metragem: <input type="number" name="metragem" class="caixa_texto" required></p>
+            <p>Peso: <input type="number" name="peso" class="caixa_texto" required></p>
+            <p><select name="operador_id" id="operador_id" class="seletor">
+                    <option value="">Selecione um Operador</option>
+                    <?php
+                        $sql_operador = "SELECT id, nome FROM Operador";
+                        $result_operador = $conexao->query($sql_operador);
+                        while ($row = $result_operador->fetch_assoc()) {
+                            $operador_id= $row['id'];
+                            $operador_nome = $row['nome'];
+                            echo "<option value='$operador_id'>$operador_nome</option>";
+                        }
+                    ?>
+                </select></p>
+            <p><select name="item_id" id="item_id" class="seletor">
+                    <option value="">Selecione um Item</option>
+                    <?php
+                        $sql_item = "SELECT id, nome FROM Item";
+                        $result_item = $conexao->query($sql_item);
+                        while ($row = $result_item->fetch_assoc()) {
+                            $item_id = $row['id'];
+                            $item_nome = $row['nome'];
+                            echo "<option value='$item_id'>$item_nome</option>";
+                        }
+                    ?>
+                </select></p>
+            <p><select name="cliente_id" id="cliente_id" class="seletor">
+                    <option value="">Selecione um Cliente</option>
+                    <?php
+                        $sql_cliente = "SELECT id, nome FROM Cliente";
+                        $result_cliente = $conexao->query($sql_cliente);
+                        while ($row = $result_cliente->fetch_assoc()) {
+                            $cliente_id = $row['id'];
+                            $cliente_nome = $row['nome'];
+                            echo "<option value='$cliente_id'>$cliente_nome</option>";
+                        }
+                    ?>
+                </select></p>
+            <input type="submit" value="Enviar" id="botao">
+        </form>
+    </main>
 </body>
 </html>
 

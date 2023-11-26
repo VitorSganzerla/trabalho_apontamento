@@ -36,15 +36,17 @@ $conexao -> close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Editar</title>
 </head>
 <body>
-    <form action="editar.php" method="post">
-        <input type="hidden" name="id" value="<?php echo $Operador['id']; ?>">
-        <p>Nome: <input type="text" name="nome" value="<?php echo $Operador['nome']; ?>"></p>
-        <p>Número de Matrícula: <input type="text" name="numero_matricula" value="<?php echo $Operador['numero_matricula']; ?>"></p>
-        <input type="submit" value="Salvar">
-    </form>
+    <main class="center">
+        <form action="editar.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $Operador['id']; ?>">
+            <p>Nome: <input type="text" name="nome" class="caixa_texto" value="<?php echo $Operador['nome']; ?>"></p>
+            <p>Número de Matrícula: <input type="text" name="numero_matricula" class="caixa_texto" value="<?php echo $Operador['numero_matricula']; ?>"></p>
+            <input type="submit" value="Salvar" id="botao">
+        </form>
+    </main>
 </body>
 </html>

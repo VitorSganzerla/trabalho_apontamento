@@ -34,27 +34,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Editar</title>
 </head>
 <body>
-    <form action="editar.php" method="post">
-        <input type="hidden" name="id" value="<?php echo $Item['id']; ?>">
-        Nome: <input type="text" name="nome" value="<?php echo $Item['nome']; ?>"><br>
-        Cliente: <select name="cliente_id" id="cliente_id">
-            <option value="">Selecione um Cliente</option>
-            <?php
-                $sql_cliente = "SELECT id, nome FROM Cliente";
-                $result_cliente = $conexao->query($sql_cliente);
-
-                while ($row = $result_cliente->fetch_assoc()) {
-                    $cliente_id= $row['id'];
-                    $cliente_nome = $row['nome'];
-                    echo "<option value='$cliente_id'>$cliente_nome</option>";
-                }
-            ?>
-        </select>
-        <input type="submit" value="Salvar">
-    </form>
+    <main class="center">
+        <form action="editar.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $Item['id']; ?>">
+            <p>Nome: <input type="text" name="nome" class="caixa_texto" value="<?php echo $Item['nome']; ?>"></p>
+            <p>Cliente: <select name="cliente_id" class="seletor" id="cliente_id"></p>
+                <option value="">Selecione um Cliente</option>
+                <?php
+                    $sql_cliente = "SELECT id, nome FROM Cliente";
+                    $result_cliente = $conexao->query($sql_cliente);
+                    while ($row = $result_cliente->fetch_assoc()) {
+                        $cliente_id= $row['id'];
+                        $cliente_nome = $row['nome'];
+                        echo "<option value='$cliente_id'>$cliente_nome</option>";
+                    }
+                ?>
+            </select>
+            <p><input type="submit" value="Salvar" id="botao"></p>
+        </form>
+    </main>
 </body>
 </html>
 

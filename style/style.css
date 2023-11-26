@@ -1,0 +1,53 @@
+body {
+    background-color: #9AD1D4;
+}
+main {
+    border: 0.8px solid #0000003e;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #bbedf0;
+}
+p {
+    font-size: 1.5em;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#botao {
+    border-radius: 6px;
+    font-size: 1rem;
+    width: auto;
+}
+.caixa_texto {
+    border-radius: 8px;
+}
+input {
+    width: auto;
+    font-size: 0.7em;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+a::after {
+    color: #000000;
+}
+a:hover {
+    text-decoration: underline;
+    font-size: 1.05em;
+}
+table, th, td {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+th, td {
+    background-color: #dfecec;
+    padding: 1px 3.5px;
+}
+.seletor {
+    border-radius: 8px;
+    size: auto;
+}
