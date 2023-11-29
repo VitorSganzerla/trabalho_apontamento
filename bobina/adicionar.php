@@ -15,8 +15,8 @@
         <form action="adicionar.php" method="post">
             <p>Metragem: <input type="number" name="metragem" class="caixa_texto" required></p>
             <p>Peso: <input type="number" name="peso" class="caixa_texto" required></p>
-            <p><select name="operador_id" id="operador_id" class="seletor">
-                    <option value="">Selecione um Operador</option>
+            <p>Operador: <select name="operador_id" id="operador_id" class="seletor">
+                    <option value="">Selecione um Operador</option></p>
                     <?php
                         $sql_operador = "SELECT id, nome FROM Operador";
                         $result_operador = $conexao->query($sql_operador);
@@ -26,9 +26,9 @@
                             echo "<option value='$operador_id'>$operador_nome</option>";
                         }
                     ?>
-                </select></p>
-            <p><select name="item_id" id="item_id" class="seletor">
-                    <option value="">Selecione um Item</option>
+                </select>
+            <p>Item: <select name="item_id" id="item_id" class="seletor">
+                    <option value="">Selecione um Item</option></p>
                     <?php
                         $sql_item = "SELECT id, nome FROM Item";
                         $result_item = $conexao->query($sql_item);
@@ -38,9 +38,9 @@
                             echo "<option value='$item_id'>$item_nome</option>";
                         }
                     ?>
-                </select></p>
-            <p><select name="cliente_id" id="cliente_id" class="seletor">
-                    <option value="">Selecione um Cliente</option>
+                </select>
+            <p>Cliente: <select name="cliente_id" id="cliente_id" class="seletor">
+                    <option value="">Selecione um Cliente</option></p>
                     <?php
                         $sql_cliente = "SELECT id, nome FROM Cliente";
                         $result_cliente = $conexao->query($sql_cliente);
@@ -50,8 +50,8 @@
                             echo "<option value='$cliente_id'>$cliente_nome</option>";
                         }
                     ?>
-                </select></p>
-            <input type="submit" value="Enviar" id="botao">
+                </select>
+            <p><input type="submit" value="Enviar" id="botao"></p>
         </form>
     </main>
 </body>

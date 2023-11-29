@@ -13,8 +13,9 @@
 <body>
     <main class="center">
         <form action="adicionar.php" method="post">
+            <p>Cliente:
             <select name="cliente_id" id="cliente_id" class="seletor">
-                <option value="">Selecione um Cliente</option>
+                <option value="">Selecione um Cliente</option></p>
                 <?php
                     $sql_cliente = "SELECT id, nome FROM Cliente";
                     $result_cliente = $conexao->query($sql_cliente);
