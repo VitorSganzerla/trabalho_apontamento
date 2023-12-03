@@ -11,6 +11,13 @@
     <title>Adicionar</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="../operador/adicionar.php">Operador </a>
+            <a href="../cliente/adicionar.php">Cliente </a>
+            <a href="../item/adicionar.php">Item </a>
+        </nav>
+    </header>
     <main class="center">
         <form action="adicionar.php" method="post">
             <p>Metragem: <input type="number" name="metragem" class="caixa_texto" required></p>
@@ -54,6 +61,9 @@
             <p><input type="submit" value="Enviar" id="botao"></p>
         </form>
     </main>
+    <footer>
+        <a href="listar.php">Listar</a>
+    </footer>
 </body>
 </html>
 

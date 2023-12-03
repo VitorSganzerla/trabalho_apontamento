@@ -1,11 +1,39 @@
 body {
     background-color: #9AD1D4;
+    margin: 0;
+}
+header {
+    background-color: #bbedf0;
+    width: 100vw;
+    padding: 20px;
+    border: 0.8px solid #0000003e;
+}
+header a {
+    padding: 8px;
+    font-size: 1.2em;
 }
 main {
     border: 0.8px solid #0000003e;
     border-radius: 10px;
     padding: 10px;
     background-color: #bbedf0;
+}
+footer {
+    background-color: #bbedf0;
+    padding: 20px;
+    border: 0.8px solid #0000003e;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+footer a {
+    position: absolute;
+    right: 80px;
+    bottom: 8px;
+    font-size: 1.2em;
+}
+footer a:hover, header a:hover {
+    font-size: 1.25em;
 }
 p {
     font-size: 1.5em;

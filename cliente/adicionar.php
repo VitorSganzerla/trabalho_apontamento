@@ -7,6 +7,13 @@
     <title>Adicionar</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="../operador/adicionar.php">Operador </a>
+            <a href="../item/adicionar.php">Item </a>
+            <a href="../bobina/adicionar.php">Bobina </a>
+        </nav>
+    </header>
     <main class="center">
         <form action="adicionar.php" method="post">
             <p>Nome: <input type="text" name="nome" class="caixa_texto" required></p>
@@ -14,6 +21,9 @@
             <input type="submit" value="Enviar" id="botao">
         </form>
     </main>
+    <footer>
+        <a href="listar.php">Listar</a>
+    </footer>
 </body>
 </html>
 

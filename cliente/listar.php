@@ -14,6 +14,13 @@
     <title>Listar</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="../operador/adicionar.php">Operador </a>
+            <a href="../item/adicionar.php">Item </a>
+            <a href="../bobina/adicionar.php">Bobina </a>
+        </nav>
+    </header>
     <main class="center">
         <h1>Clientes</h1>
         <a href="adicionar.php">Registrar novo cliente</a>
@@ -49,6 +56,9 @@
             </tbody>
         </table>
     </main>
+    <footer>
+        <a href="adicionar.php">Adicionar</a>
+    </footer>
 </body>
 </html>
 

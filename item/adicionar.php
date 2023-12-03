@@ -11,6 +11,13 @@
     <title>Adicionar</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="../operador/adicionar.php">Operador </a>
+            <a href="../cliente/adicionar.php">Cliente </a>
+            <a href="../bobina/adicionar.php">Bobina </a>
+        </nav>
+    </header>
     <main class="center">
         <form action="adicionar.php" method="post">
             <p>Cliente:
@@ -30,6 +37,9 @@
             <input type="submit" value="Enviar" id="botao">
         </form>
     </main>
+    <footer>
+        <a href="listar.php">Listar</a>
+    </footer>
 </body>
 </html>
 
